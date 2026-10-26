@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Installation guide
+    url: https://github.com/skizap/cyberpunk2077-linux-modding-guide#readme
+    about: Read the original Linux, Steam Proton, CET, and RED4ext installation walkthrough.
+  - name: Troubleshooting guide
+    url: https://github.com/skizap/cyberpunk2077-linux-modding-guide/blob/main/docs/troubleshooting.md
+    about: Check Error 998, missing overlay, Protontricks, runtime, and logging guidance.

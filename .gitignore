@@ -1,0 +1,57 @@
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+
+# Editor and IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Generated documentation-site output
+_site/
+site/
+public/
+build/
+dist/
+.cache/
+
+# Local diagnostics and private report material
+*.log
+logs/
+reports/
+*.tmp
+*.bak
+
+# Local environment files and credentials
+.env
+.env.*
+!.env.example
+
+# Third-party binaries, game/mod archives, and assets are never committed
+*.dll
+*.asi
+*.exe
+*.msi
+*.cab
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.mp4
+*.mp3
+*.wav
+
+# Local tooling and package environments
+node_modules/
+__pycache__/
+.venv/
+venv/

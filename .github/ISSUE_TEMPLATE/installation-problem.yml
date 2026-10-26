@@ -1,0 +1,132 @@
+name: Installation problem
+description: Report a reproducible Cyberpunk 2077, CET, or RED4ext installation problem on Linux with Steam Proton.
+title: "[Installation problem]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. First check the [README](https://github.com/skizap/cyberpunk2077-linux-modding-guide#readme) and [troubleshooting guide](https://github.com/skizap/cyberpunk2077-linux-modding-guide/blob/main/docs/troubleshooting.md).
+
+        This repository contains documentation only. Do not attach or paste copyrighted game files, mod binaries, saves, screenshots from protected material, or full third-party documentation. Please link to official or primary sources only.
+
+  - type: input
+    id: game-version
+    attributes:
+      label: Cyberpunk 2077 game version
+      description: Enter the exact version shown by the game or Steam, for example 2.x.x.
+      placeholder: "Example: 2.x.x"
+    validations:
+      required: true
+
+  - type: input
+    id: cet-version
+    attributes:
+      label: Cyber Engine Tweaks (CET) version
+      description: Enter the exact CET release version, or say "not installed".
+      placeholder: "Example: 1.x.x or not installed"
+    validations:
+      required: true
+
+  - type: input
+    id: red4ext-version
+    attributes:
+      label: RED4ext version
+      description: Enter the exact RED4ext release version, or say "not installed".
+      placeholder: "Example: 1.x.x or not installed"
+    validations:
+      required: true
+
+  - type: input
+    id: proton-version
+    attributes:
+      label: Proton version and source
+      description: Include the selected compatibility tool and its source, such as Proton Experimental or a named custom build.
+      placeholder: "Example: Proton Experimental, Steam-provided"
+    validations:
+      required: true
+
+  - type: input
+    id: distro-version
+    attributes:
+      label: Linux distribution, version, and edition
+      description: Name your distribution and exact version or edition if known. Write "unknown" rather than guessing missing details.
+      placeholder: "Example: Linux Mint <version>/<edition>, another distribution, or unknown"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: steam-packaging
+    attributes:
+      label: Steam installation type
+      description: Which Steam packaging is in use?
+      options:
+        - Native package
+        - Flatpak
+        - Other or unsure
+    validations:
+      required: true
+
+  - type: input
+    id: protontricks-version
+    attributes:
+      label: Protontricks version and packaging
+      description: Include the version and how Protontricks was installed or packaged. If it was not used, write "not used".
+      placeholder: "Example: 1.x.x from Linux Mint package manager, or not used"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest exact sequence that reliably produces the problem. Include relevant launch options or configuration changes, but do not include credentials or private paths.
+      placeholder: |
+        1. Start from ...
+        2. Install or configure ...
+        3. Launch ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen after following the documented step.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: Describe exactly what happened, including any error text. Do not assume one error message has a single universal cause.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log excerpt or terminal output
+      description: Paste only the smallest relevant excerpt. Before submitting, redact usernames, home or private paths, account identifiers, tokens, passwords, and other secrets. Do not upload logs that contain unredacted private information.
+      render: shell
+      placeholder: "Paste a redacted excerpt here, or write 'No relevant log available'."
+    validations:
+      required: true
+
+  - type: input
+    id: official-sources
+    attributes:
+      label: Official or primary source links
+      description: Link to relevant official game, Proton, CET, RED4ext, or mod pages. Do not attach copyrighted game or mod files.
+      placeholder: "https://..."
+
+  - type: checkboxes
+    id: privacy-and-files
+    attributes:
+      label: Privacy and file check
+      options:
+        - label: I removed secrets, usernames, account identifiers, and private paths from what I shared.
+          required: true
+        - label: I have not uploaded copyrighted game files, mod binaries, or other third-party files; I used official or primary source links where relevant.
+          required: true

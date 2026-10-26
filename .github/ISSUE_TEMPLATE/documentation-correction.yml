@@ -1,0 +1,85 @@
+name: Documentation correction
+description: Suggest a precise correction or clarification to this Linux Mint, Steam Proton, CET, and RED4ext guide.
+title: "[Documentation]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for improving the guide. Please check the [README](https://github.com/skizap/cyberpunk2077-linux-modding-guide#readme) and [troubleshooting guide](https://github.com/skizap/cyberpunk2077-linux-modding-guide/blob/main/docs/troubleshooting.md) first.
+
+        Suggestions must use original prose and primary or official references. This repository is documentation-only: do not attach game files, mod binaries, copied third-party documentation, screenshots from protected material, or private logs.
+
+  - type: input
+    id: location
+    attributes:
+      label: Page and section needing correction
+      description: Identify the local document and heading or nearby wording.
+      placeholder: "Example: docs/troubleshooting.md — RED4ext launch checks"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-text
+    attributes:
+      label: Current wording or behavior
+      description: Quote only the small relevant passage or describe the specific instruction. Do not paste third-party documentation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Proposed correction in original prose
+      description: Supply concise replacement wording or explain the exact change. Keep the claim narrow and avoid presenting a single error message, including error998, as having one universal cause.
+    validations:
+      required: true
+
+  - type: input
+    id: version-date
+    attributes:
+      label: Version details and date checked
+      description: Include applicable game, CET, RED4ext, Proton, and Protontricks versions, plus the date the information was checked.
+      placeholder: "Example: Game 2.x.x, CET 1.x.x, RED4ext 1.x.x, Proton Experimental; checked 2026-10-25"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: evidence-status
+    attributes:
+      label: Evidence status
+      description: Tell us whether this is a user-tested result or an inference. Inferences are welcome when clearly labeled.
+      options:
+        - User-tested on the reported configuration
+        - Inferred from primary-source evidence
+        - Both user-tested and supported by primary-source evidence
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary or official source links
+      description: Provide official maintainer, release, or documentation links and explain briefly how they support the correction. Do not link to copied documentation or uploaded binaries.
+      placeholder: |
+        - https://...
+        - Why this source applies: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification and reversal
+      description: Explain how a reader can confirm the proposed wording or procedure, and how to reverse the change if it does not help. Prefer minimal, reversible changes; do not recommend sudo Protontricks, deleting a prefix, or --force as blanket fixes.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution-check
+    attributes:
+      label: Contribution check
+      options:
+        - label: I wrote the proposed wording in my own words and distinguished tested findings from inferences.
+          required: true
+        - label: I have not included private paths, usernames, credentials, logs with secrets, copyrighted game files, or mod binaries.
+          required: true
