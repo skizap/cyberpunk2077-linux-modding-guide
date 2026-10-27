@@ -7,7 +7,7 @@ body:
       value: |
         Thank you for improving the guide. Please check the [README](https://github.com/skizap/cyberpunk2077-linux-modding-guide#readme) and [troubleshooting guide](https://github.com/skizap/cyberpunk2077-linux-modding-guide/blob/main/docs/troubleshooting.md) first.
 
-        Suggestions must use original prose and primary or official references. This repository is documentation-only: do not attach game files, mod binaries, copied third-party documentation, screenshots from protected material, or private logs.
+        Suggestions must use original prose and primary or official references. This repository contains documentation and a helper installer script: do not attach game files, mod binaries, copied third-party documentation, screenshots from protected material, or private logs.
 
   - type: input
     id: location

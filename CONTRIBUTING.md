@@ -6,7 +6,7 @@ Before opening an issue or pull request, check the local [README](README.md) and
 
 ## Documentation contributions
 
-This repository is documentation-only. Please contribute original prose written for this guide. Do not paste third-party documentation, mod pages, troubleshooting posts, game files, mod binaries, screenshots, logs, or other copyrighted material.
+This repository contains documentation and one helper installer script (`cyberpunk-linux-modder.sh`). Please contribute original prose written for this guide. Do not paste third-party documentation, mod pages, troubleshooting posts, game files, mod binaries, screenshots, logs, or other copyrighted material.
 
 When adding or revising technical instructions:
 
@@ -19,6 +19,16 @@ When adding or revising technical instructions:
 Avoid universal claims about `error998` or any other error. The same message can have different causes across game builds, mod versions, prefixes, and Steam installations. Describe the observed conditions and evidence instead.
 
 Do not recommend `sudo` with Protontricks. Do not present deleting a Proton prefix or using `--force` as a blanket fix. If either action is relevant to a narrowly documented case, it must be clearly marked as exceptional, explain the risk, and offer safer reversible checks first.
+
+## Script contributions
+
+The installer script accepts changes that keep its safety envelope intact:
+
+- Keep `bash -n` clean and ShellCheck (style level) free of findings.
+- Keep `--self-test` passing, and extend it when adding or changing helpers.
+- Never add silent privilege escalation, redistribution of game or mod binaries, mirror downloads, or unconfirmed component installation.
+- Preserve backups-before-changes, checksum verification, dry-run fidelity, and the documented exit codes.
+- Update `docs/installer.md` in the same pull request whenever behavior, phases, or flags change.
 
 ## Reporting installation problems
 
@@ -47,4 +57,4 @@ If a proposed change depends on an unverified assumption, open an issue first or
 
 ## License for contributions
 
-By submitting original documentation to this repository, you agree to share that contribution under the repository's [CC BY 4.0 license](LICENSE). Keep third-party software, assets, copied documentation, and private diagnostics out of commits. Link to their official sources instead.
+By submitting original documentation to this repository, you agree to share that contribution under the license governing the file you change: CC BY 4.0 for the documentation and MIT for `cyberpunk-linux-modder.sh` (both summarized in [LICENSE](LICENSE)). Keep third-party software, assets, copied documentation, and private diagnostics out of commits. Link to their official sources instead.

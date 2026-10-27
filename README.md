@@ -12,9 +12,21 @@ Looking for **“Unable to load cyber_engine_tweaks.asi. Error: 998”**, **“S
 
 The instructions target the **Steam copy of Cyberpunk 2077**, whose app ID is `1091500`. They configure its existing Proton prefix and install two modding frameworks manually. They do not install every Nexus mod or cover a game launched directly through Heroic, Lutris, Bottles, or GOG. Non-Steam shortcuts can have a different app ID; do not apply `1091500` to an unrelated prefix. The CET Linux guide describes those alternative launcher cases. [1]
 
-This repository contains original text and configuration examples only. **No game files, mod binaries, redistributable installers, third-party images, or user logs are hosted here.** Download software from the official sources linked below. There is no one-click installer or `curl | bash` command.
+This repository contains original text and configuration examples only. **No game files, mod binaries, redistributable installers, third-party images, or user logs are hosted here.** Download software from the official sources linked below. A guided installer script ships in this repository (see [the installer documentation](docs/installer.md)); it downloads only from those same official sources and verifies pinned checksums. Piping installers straight from the internet (`curl | bash`) is still discouraged — download the script, read it, and run it from a file.
 
 If CET already works, do not install extra runtimes or reset a prefix just to match this guide.
+
+## Option A: the guided installer script
+
+Prefer automation? `cyberpunk-linux-modder.sh` performs the manual steps documented below — Flatpak Protontricks setup, a full prefix backup, the Winetricks components, checksum-verified downloads of RED4ext and CET from their official releases, extraction into the game folder, and launch-option detection.
+
+```bash
+./cyberpunk-linux-modder.sh --dry-run    # preview every action for your machine
+./cyberpunk-linux-modder.sh              # guided install with prompts and backups
+./cyberpunk-linux-modder.sh --rollback   # restore the prefix backup if a change failed
+```
+
+Safety properties: official download sources only, pinned SHA-256 checksums, a verified prefix backup before component changes, resumable phases, redacted crash reports with next-step hints, and no silent privilege escalation. Every phase, flag, and internal layer is explained in the [installer architecture reference](docs/installer.md). Sections 1–7 below still matter: they explain what the script changes and why.
 
 ## Before making changes
 

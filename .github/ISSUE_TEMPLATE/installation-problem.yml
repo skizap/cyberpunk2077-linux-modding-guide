@@ -7,7 +7,7 @@ body:
       value: |
         Thanks for reporting a problem. First check the [README](https://github.com/skizap/cyberpunk2077-linux-modding-guide#readme) and [troubleshooting guide](https://github.com/skizap/cyberpunk2077-linux-modding-guide/blob/main/docs/troubleshooting.md).
 
-        This repository contains documentation only. Do not attach or paste copyrighted game files, mod binaries, saves, screenshots from protected material, or full third-party documentation. Please link to official or primary sources only.
+        This repository contains documentation and a helper installer script. Do not attach or paste copyrighted game files, mod binaries, saves, screenshots from protected material, or full third-party documentation. Please link to official or primary sources only.
 
   - type: input
     id: game-version
@@ -74,6 +74,13 @@ body:
       placeholder: "Example: 1.x.x from Linux Mint package manager, or not used"
     validations:
       required: true
+
+  - type: input
+    id: installer-script
+    attributes:
+      label: Installer script usage
+      description: If you used cyberpunk-linux-modder.sh, give its version from --version and, if one was produced, mention the crash report in the state directory (its paths are already redacted). Otherwise write "not used".
+      placeholder: "Example: 1.1.0, crash report excerpt below; or not used"
 
   - type: textarea
     id: steps-to-reproduce
